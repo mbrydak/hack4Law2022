@@ -9,8 +9,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@alan-ai/alan-sdk-web": "^1.8.35",
+    "i18next": "^21.10.0",
+    "i18next-browser-languagedetector": "^6.1.8",
+    "i18next-http-backend": "^1.4.4",
+    "i18next-xhr-backend": "^3.2.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-i18next": "^11.18.6",
+    "react-int": "^0.3.3",
+    "react-intl": "^6.1.2",
+    "react-router-dom": "^6.4.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",
