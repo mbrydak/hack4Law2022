@@ -1,10 +1,13 @@
 import React, { useEffect } from "react";
 import alanBtnAI from "@alan-ai/alan-sdk-web";
 import { Route, Routes, Link } from "react-router-dom";
+import { useNavigate } from "react-router";
 import i18next from "i18next";
 import Test from "./components/Test";
 
 const App = () => {
+  let navigate = useNavigate();
+
   function handleClick(lang) {
     i18next.changeLanguage(lang);
   }
@@ -16,7 +19,16 @@ const App = () => {
   useEffect(() => {
     alanBtnAI({
       key: key,
-      onCommand: ({ command }) => {},
+      onCommand: ({ command }) => {
+        if (command === "test") {
+          navigate("/test");
+          //oprócz tego kod piszę bezpośrednio w aplikacji Alan Ai - tutaj nawiązuje tylko połączenie.
+          //Ogólnie tym się zajmę, więc na to nie zwracaj uwagi :D
+        }
+        if (command === "home") {
+          navigate("/");
+        }
+      },
     });
   }, []);
 
