@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Route, Routes, Link } from "react-router-dom";
 import AlanContainer from "./components/AlanAIContainer";
 import { AlanContextExample } from "./components/AlanContextExample";
-import Test from "./components/Test";
+import Test from "./components/Test/Test";
 import i18next from "i18next";
 
 const App = () => {
