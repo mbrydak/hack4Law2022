@@ -4,6 +4,7 @@ import api from "../../services/api.js";
 import { AuthCard, AuthContainer, AuthTitle } from "../../styles/auth-page.js";
 import { Button, Form, Input } from "antd";
 import { useNavigate } from "react-router";
+import handleError from "../../utils/handle-error.js";
 
 const Login = () => {
   const {t} = useTranslation();
@@ -13,10 +14,8 @@ const Login = () => {
   const login = values => {
     const {email, password} = values;
     if (email && password) {
-      api.auth.signInWithPassword({email, password}).then(response => {
-        if (!response.error) {
-          navigate('/law-office');
-        }
+      api.auth.signInWithPassword({email, password}).then(handleError).then(() => {
+        navigate('/law-office');
       });
     }
   }
@@ -30,7 +29,7 @@ const Login = () => {
             <Input placeholder={t("User.email")}/>
           </Form.Item>
           <Form.Item label={t("User.password")} name="password">
-            <Input placeholder={t("User.password")}/>
+            <Input.Password placeholder={t("User.password")}/>
           </Form.Item>
           <Form.Item>
             <Button type="primary" htmlType="submit">{t("Action.login")}</Button>

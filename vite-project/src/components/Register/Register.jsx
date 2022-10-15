@@ -5,6 +5,7 @@ import { AuthCard, AuthContainer, AuthTitle } from "../../styles/auth-page.js";
 import api from "../../services/api.js";
 import { Client } from "../../models/role.js";
 import { useNavigate } from "react-router";
+import handleError from "../../utils/handle-error.js";
 
 const Register = () => {
   const {t} = useTranslation();
@@ -16,27 +17,23 @@ const Register = () => {
     setIsConfirmed(event.target.checked);
   }
 
-  const register = values => {
+  const register = async values => {
     if (isConfirmed) {
       const {firstName, lastName, email, pesel, phone, password, passwordConfirmation} = values;
       if (password === passwordConfirmation) {
-        api.auth.signUp({
+        const signUp = await api.auth.signUp({
           email,
           password,
-          options: {
-            data: {
-              firstName,
-              lastName,
-              pesel,
-              phone,
-              role: Client
-            }
-          }
-        }).then(response => {
-          if (!response.error) {
-            navigate('/login');
-          }
-        });
+        }).then(handleError);
+        await api.from('profiles').insert({
+          user_id: signUp.data.user.id,
+          first_name: firstName,
+          last_name: lastName,
+          pesel,
+          phone,
+          role: Client
+        }).then(handleError);
+        navigate('/login');
       }
     }
   }
