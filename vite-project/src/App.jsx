@@ -3,8 +3,7 @@ import { Route, Routes, Link } from "react-router-dom";
 import AlanContainer from "./components/AlanAIContainer";
 import { AlanContextExample } from "./components/AlanContextExample";
 import MenuItems from "./components/Menu/MenuItems";
-import Banner from "./components/Banner/Banner";
-import PanelNavigation from "./components/PanelNavigation/PanelNavigation";
+import Home from "./components/Home/Home";
 import Test from "./components/Test/Test";
 import i18next from "i18next";
 
@@ -27,12 +26,8 @@ const App = () => {
         <button onClick={() => handleClick("en")}>En</button> */}
       </div>
       <MenuItems />
-      <Banner />
-      <PanelNavigation />
+      <Home />
       <AlanContextExample.Provider value={{ values, setValues }}>
-        <Routes>
-          <Route path="/test" element={<Test />} />
-        </Routes>
         <AlanContainer />
       </AlanContextExample.Provider>
     </>
