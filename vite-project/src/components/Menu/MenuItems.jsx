@@ -7,36 +7,20 @@ const MenuItems = () => {
 
   const items = [
     {
-      label: "Logo",
+      label: "",
       key: "logo",
       id: "logo",
-      onClick: () => navigate("/")
+      onClick: () => navigate("/"),
     },
     {
-      label: "Regulamin",
+      label: "Kontakt",
       key: "item-1 ",
-      onClick: () => navigate("/regulamin"),
+      onClick: () => navigate("/kontakt"),
     },
-    {
-      label: "Prawa autorskie",
-      key: "item-2",
-      onClick: () => navigate("/prawa-autorskie"),
-    },
-    {
-      label: "Warunki korzystania",
-      key: "item-3 ",
-      onClick: () => navigate("/warunki"),
-    },
-    { label: "RODO", key: "item-4 ", onClick: () => navigate("/rodo") },
     {
       label: "Dostępność",
-      key: "item-5 ",
-      onClick: () => navigate("/dostępność"),
-    },
-    {
-      label: "sub menu",
-      key: "submenu",
-      children: [{ label: "item 3", key: "submenu-item-1" }],
+      key: "item-2",
+      onClick: () => navigate("/dostepnosc"),
     },
   ];
 

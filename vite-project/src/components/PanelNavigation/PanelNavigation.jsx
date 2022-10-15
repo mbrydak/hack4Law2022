@@ -3,7 +3,8 @@ import {
   ContainerPanel,
   Title,
   Text,
-  AntButton,
+  AntButtonClient,
+  AntButtonCompany,
   Panels,
   BoxTitle,
   Box,
@@ -33,12 +34,18 @@ const PanelNavigation = () => {
       <Panels>
         <Box>
           <BoxTitle>Klient</BoxTitle>
-          <AntButton type="primary" onClick={() => navigate('/login')}>Logowanie</AntButton>
-          <AntButton type="primary" onClick={() => navigate('/register')}>Rejestracja</AntButton>
+          <AntButtonClient type="primary" onClick={() => navigate("/login")}>
+            Logowanie
+          </AntButtonClient>
+          <AntButtonClient type="primary" onClick={() => navigate("/register")}>
+            Rejestracja
+          </AntButtonClient>
         </Box>
         <Box>
           <BoxTitle>Firma</BoxTitle>
-          <AntButton type="primary" onClick={() => navigate('/login')}>Logowanie</AntButton>
+          <AntButtonCompany type="primary" onClick={() => navigate("/login")}>
+            Logowanie
+          </AntButtonCompany>
         </Box>
       </Panels>
     </ContainerPanel>
