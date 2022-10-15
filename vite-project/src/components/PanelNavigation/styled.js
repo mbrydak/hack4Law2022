@@ -16,9 +16,17 @@ export const Text = styled.p `
     text-align: justify;
 `
 
-export const AntButton = styled(Button)`
+export const AntButtonClient = styled(Button)`
    width: 350px;
    margin-bottom: 10px;
+   background-color: #E4AE22;
+   border: none;
+`
+
+export const AntButtonCompany = styled(Button)`
+   width: 350px;
+   margin-bottom: 10px;
+   border: none;
 `
 
 export const Panels = styled.div `

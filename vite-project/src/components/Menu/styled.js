@@ -7,10 +7,13 @@ export const MenuAnt = styled(Menu) `
     flex-direction: row;
     background-color: white;
     padding: 20px 50px 20px 0px;
-    font-size: 20px;
+    font-size: 18px;
     border: none;
+    & li:nth-child(3) {
+        margin-right: 150px;
+    }
+
     #logo {
-        background-color: red;
         margin: 0 auto;
     }
 `
