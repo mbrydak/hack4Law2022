@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "main": "Nagłówek",
+        "test": "TestPL",
+        "register": "Rejestracja",
+        "login": "Logowanie",
+        "finishRegistration": "Dokończ rejestrację"
+    },
+    "Action": {
+        "register": "Zarejestruj",
+        "login": "Zaloguj"
+    },
+    "User": {
+        "firstName": "Imię",
+        "lastName": "Nazwisko",
+        "email": "Email",
+        "pesel": "PESEL",
+        "phone": "Numer telefonu",
+        "password": "Hasło",
+        "passwordConfirmation": "Potwierdź hasło",
+        "agreementLabel": "Akceptuję regulamin użytkowania systemu",
+        "noData": "Brak użytkowników"
+    }
+}

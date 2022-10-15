@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "main": "Header",
+        "test": "TestEn",
+        "register": "Registration",
+        "login": "Log in",
+        "finishRegistration": "Finish registration"
+    },
+    "Action": {
+        "register": "Register",
+        "login": "Log in"
+    },
+    "User": {
+        "firstName": "First name",
+        "lastName": "Last name",
+        "email": "Email",
+        "pesel": "PESEL",
+        "phone": "Phone number",
+        "password": "Password",
+        "passwordConfirmation": "Confirm password",
+        "agreementLabel": "I agree to the terms and conditions",
+        "noData": "No users"
+    }
+}
