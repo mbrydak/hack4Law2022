@@ -4,6 +4,7 @@ import AlanContainer from "./components/AlanAIContainer";
 import { AlanContextExample } from "./components/AlanContextExample";
 import MenuItems from "./components/Menu/MenuItems";
 import Banner from "./components/Banner/Banner";
+import PanelNavigation from "./components/PanelNavigation/PanelNavigation";
 import Test from "./components/Test/Test";
 import i18next from "i18next";
 
@@ -27,6 +28,7 @@ const App = () => {
       </div>
       <MenuItems />
       <Banner />
+      <PanelNavigation />
       <AlanContextExample.Provider value={{ values, setValues }}>
         <Routes>
           <Route path="/test" element={<Test />} />
