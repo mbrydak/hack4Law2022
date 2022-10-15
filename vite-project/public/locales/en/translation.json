@@ -3,7 +3,8 @@
         "main": "Header",
         "test": "TestEn",
         "register": "Registration",
-        "login": "Log in"
+        "login": "Log in",
+        "finishRegistration": "Finish registration"
     },
     "Action": {
         "register": "Register",
@@ -17,6 +18,7 @@
         "phone": "Phone number",
         "password": "Password",
         "passwordConfirmation": "Confirm password",
-        "agreementLabel": "I agree to the terms and conditions"
+        "agreementLabel": "I agree to the terms and conditions",
+        "noData": "No users"
     }
 }

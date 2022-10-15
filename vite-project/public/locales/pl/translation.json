@@ -3,7 +3,8 @@
         "main": "Nagłówek",
         "test": "TestPL",
         "register": "Rejestracja",
-        "login": "Logowanie"
+        "login": "Logowanie",
+        "finishRegistration": "Dokończ rejestrację"
     },
     "Action": {
         "register": "Zarejestruj",
@@ -17,6 +18,7 @@
         "phone": "Numer telefonu",
         "password": "Hasło",
         "passwordConfirmation": "Potwierdź hasło",
-        "agreementLabel": "Akceptuję regulamin użytkowania systemu"
+        "agreementLabel": "Akceptuję regulamin użytkowania systemu",
+        "noData": "Brak użytkowników"
     }
 }

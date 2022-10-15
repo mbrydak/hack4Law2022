@@ -11,6 +11,8 @@ import i18next from "i18next";
 import Login from "./components/Login/Login.jsx";
 import Register from "./components/Register/Register.jsx";
 import Footer from "./components/Footer/Footer";
+import Users from "./components/Users/Users.jsx";
+import FinishRegistration from "./components/FinishRegistration/FinishRegistration.jsx";
 
 const App = () => {
   const [values, setValues] = useState({
@@ -38,6 +40,8 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/calendar" element={<Calendar />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/finish-registration" element={<FinishRegistration />} />
         </Routes>
         <AlanContainer />
         <Footer />

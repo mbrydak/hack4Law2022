@@ -30,6 +30,7 @@ const Register = () => {
           first_name: firstName,
           last_name: lastName,
           pesel,
+          email,
           phone,
           role: Client
         }).then(handleError);
