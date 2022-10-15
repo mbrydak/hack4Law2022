@@ -1,13 +1,17 @@
 import React from "react";
 import { useNavigate } from "react-router";
 import { MenuAnt } from "./styled";
-import "antd/dist/antd.css";
 
 const MenuItems = () => {
   const navigate = useNavigate();
 
   const items = [
-    { label: "Logo", key: "logo", id: "logo" },
+    {
+      label: "Logo",
+      key: "logo",
+      id: "logo",
+      onClick: () => navigate("/")
+    },
     {
       label: "Regulamin",
       key: "item-1 ",
@@ -16,7 +20,7 @@ const MenuItems = () => {
     {
       label: "Prawa autorskie",
       key: "item-2",
-      onClick: () => navigate("/register"),
+      onClick: () => navigate("/prawa-autorskie"),
     },
     {
       label: "Warunki korzystania",
