@@ -8,8 +8,11 @@ import {
   BoxTitle,
   Box,
 } from "./styled";
+import { useNavigate } from "react-router";
 
 const PanelNavigation = () => {
+  const navigate = useNavigate();
+
   return (
     <ContainerPanel>
       <Title>Lorem ipsum dolor</Title>
@@ -30,13 +33,12 @@ const PanelNavigation = () => {
       <Panels>
         <Box>
           <BoxTitle>Klient</BoxTitle>
-          <AntButton type="primary">Logowanie</AntButton>
-          <AntButton type="primary">Rejestracja</AntButton>
+          <AntButton type="primary" onClick={() => navigate('/login')}>Logowanie</AntButton>
+          <AntButton type="primary" onClick={() => navigate('/register')}>Rejestracja</AntButton>
         </Box>
         <Box>
           <BoxTitle>Firma</BoxTitle>
-          <AntButton type="primary">Logowanie</AntButton>
-          <AntButton type="primary">Rejestracja</AntButton>
+          <AntButton type="primary" onClick={() => navigate('/login')}>Logowanie</AntButton>
         </Box>
       </Panels>
     </ContainerPanel>

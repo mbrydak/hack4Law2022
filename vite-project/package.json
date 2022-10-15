@@ -12,6 +12,7 @@
     "@alan-ai/alan-sdk-web": "^1.8.35",
     "@ant-design/pro-layout": "^7.1.8",
     "antd": "^4.23.5",
+    "@supabase/supabase-js": "^2.0.0",
     "i18next": "^21.10.0",
     "i18next-browser-languagedetector": "^6.1.8",
     "i18next-http-backend": "^1.4.4",

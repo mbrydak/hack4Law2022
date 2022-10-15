@@ -4,9 +4,10 @@ import AlanContainer from "./components/AlanAIContainer";
 import { AlanContextExample } from "./components/AlanContextExample";
 import MenuItems from "./components/Menu/MenuItems";
 import Home from "./components/Home/Home";
-import Test from "./components/Test/Test";
 import LawOffice from "./components/LawOffice/LawOffice";
 import i18next from "i18next";
+import Login from "./components/Login/Login.jsx";
+import Register from "./components/Register/Register.jsx";
 
 const App = () => {
   const [values, setValues] = useState({
@@ -31,6 +32,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/law-office" element={<LawOffice />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
         <AlanContainer />
       </AlanContextExample.Provider>
