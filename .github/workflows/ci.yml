@@ -2,7 +2,7 @@ name: 'Terraform'
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "feature/*" ]
     paths:
       - 'infrastructure/terraform/*.tf'
   pull_request:
