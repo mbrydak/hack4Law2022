@@ -10,6 +10,7 @@ import LawOffice from "./components/LawOffice/LawOffice";
 import i18next from "i18next";
 import Login from "./components/Login/Login.jsx";
 import Register from "./components/Register/Register.jsx";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   const [values, setValues] = useState({
@@ -39,6 +40,7 @@ const App = () => {
           <Route path="/calendar" element={<Calendar />} />
         </Routes>
         <AlanContainer />
+        <Footer />
       </AlanContextExample.Provider>
     </>
   );
