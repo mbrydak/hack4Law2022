@@ -5,6 +5,7 @@ import { AlanContextExample } from "./components/AlanContextExample";
 import MenuItems from "./components/Menu/MenuItems";
 import Home from "./components/Home/Home";
 import Test from "./components/Test/Test";
+import LawOffice from "./components/LawOffice/LawOffice";
 import i18next from "i18next";
 
 const App = () => {
@@ -26,8 +27,11 @@ const App = () => {
         <button onClick={() => handleClick("en")}>En</button> */}
       </div>
       <MenuItems />
-      <Home />
       <AlanContextExample.Provider value={{ values, setValues }}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/law-office" element={<LawOffice />} />
+        </Routes>
         <AlanContainer />
       </AlanContextExample.Provider>
     </>
