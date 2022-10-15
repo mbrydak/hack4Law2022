@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Route, Routes, Link } from "react-router-dom";
 import AlanContainer from "./components/AlanAIContainer";
 import { AlanContextExample } from "./components/AlanContextExample";
+import MenuItems from "./components/Menu/MenuItems";
+import Banner from "./components/Banner/Banner";
 import Test from "./components/Test/Test";
 import i18next from "i18next";
 
@@ -20,19 +22,11 @@ const App = () => {
   return (
     <>
       <div>
-        <button onClick={() => handleClick("pl")}>PL</button>
-        <button onClick={() => handleClick("en")}>En</button>
+        {/* <button onClick={() => handleClick("pl")}>PL</button>
+        <button onClick={() => handleClick("en")}>En</button> */}
       </div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/test">Test</Link>
-          </li>
-        </ul>
-      </nav>
+      <MenuItems />
+      <Banner />
       <AlanContextExample.Provider value={{ values, setValues }}>
         <Routes>
           <Route path="/test" element={<Test />} />
