@@ -1,0 +1,36 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hack4law-deployment
+  labels:
+    app: hack4law
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hack4law
+  template:
+    metadata:
+      labels:
+        app: hack4law
+    spec:
+      containers:
+        - name: hack4law
+          image: ghcr.io/mbrydak/overengineered-solutions:main
+          ports:
+            - containerPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hack4law-service
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: hack4law
+  type: LoadBalancer

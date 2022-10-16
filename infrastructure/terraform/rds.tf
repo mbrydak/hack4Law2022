@@ -24,7 +24,7 @@ module "rds" {
 
   create_random_password = false
 
-  vpc_security_group_ids = [module.rds_postgres_5432_security_group.security_group_id]
+  vpc_security_group_ids = [aws_security_group.database_sg.id]
 
   skip_final_snapshot = true
 }

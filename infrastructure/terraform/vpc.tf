@@ -8,22 +8,24 @@ module "hack4law_vpc" {
   public_subnets   = var.public_subnet_cidr_blocks
   database_subnets = var.db_subnet_cidr_blocks
 
-  enable_nat_gateway           = true
-  enable_dns_support           = true
-  enable_dns_hostnames         = true
-  create_database_subnet_group = true
-  single_nat_gateway           = false
-  create_igw                   = true
-  database_subnet_tags = {
-    "name" = "hack4law-db-subnet"
+  enable_nat_gateway            = true
+  enable_dns_support            = true
+  enable_dns_hostnames          = true
+  create_database_subnet_group  = true
+  single_nat_gateway            = false
+  create_igw                    = true
+  manage_default_security_group = true
+  map_public_ip_on_launch       = true
+  tags = {
+    "kubernetes.io/cluster/${local.cluster_name}" = "shared"
   }
   private_subnet_tags = {
-    "name" = "hack4law-private-subnet"
+    "kubernetes.io/cluster/${local.cluster_name}" = "shared"
+    "kubernetes.io/role/internal-elb"             = 1
   }
   public_subnet_tags = {
-    "name" = "hack4law-public-subnet"
-  }
-  database_subnet_group_tags = {
-    "name" = "hack4law-db-subnet-group"
+    "kubernetes.io/cluster/${local.cluster_name}" = "shared"
+    "kubernetes.io/role/elb"                      = 1
   }
 }
+

@@ -47,8 +47,25 @@ variable "db_subnet_cidr_blocks" {
   ]
 }
 
+variable "git_repo" {
+  description = "value of git_repo"
+  type        = string
+  default     = "https://github.com/Cedrik240/hack4Law2022.git"
+}
+
 variable "aws_availability_zones" {
   description = "value of aws_availability_zones"
   type        = list(string)
   default     = ["eu-central-1a", "eu-central-1b", "eu-central-1c"]
+}
+
+variable "region" {
+  type        = string
+  default     = "eu-central-1"
+  description = "description"
+}
+
+variable "ingress_ports" {
+  type    = list(any)
+  default = ["5432"]
 }
